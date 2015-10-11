@@ -1,0 +1,86 @@
+// Variables
+$yellow: #FFEB3B;
+$blue:   #00B0FF;
+// Page styles to show off the CSS triangles
+html, body {
+    height: 100%;
+    width: 100%;
+}
+.container {
+    background-color: $blue;
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+.sun {
+    height: 300px;
+    left: 50%;
+    margin-left: -150px;
+    margin-top: -150px;
+    position: absolute;
+    top: 50%;
+    width: 300px;
+}
+.center {
+    background-color: $yellow;
+    border-radius: 50%;
+    height: 150px;
+    left: 50%;
+    margin-left: -75px;
+    margin-top: -75px;
+    position: absolute;
+    top: 50%;
+    width: 150px;
+}
+.top-left {
+    @include css-triangle(top-left, $yellow, 50px, 50px);
+    left: 15%;
+    position: absolute;
+    top: 15%;
+}
+.top {
+    @include css-triangle(top, $yellow, 35px, 70px);
+    left: 50%;
+    margin-left: -35px;
+    position: absolute;
+    top: 0;
+}
+.top-right {
+    @include css-triangle(top-right, $yellow, 50px, 50px);
+    position: absolute;
+    right: 15%;
+    top: 15%;
+}
+.right {
+    @include css-triangle(right, $yellow, 70px, 35px);
+    margin-top: -35px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+}
+.bottom-right {
+    @include css-triangle(bottom-right, $yellow, 50px, 50px);
+    bottom: 15%;
+    position: absolute;
+    right: 15%;
+}
+.bottom {
+    @include css-triangle(bottom, $yellow, 35px, 70px);
+    bottom: 0;
+    left: 50%;
+    margin-left: -35px;
+    position: absolute;
+}
+.bottom-left {
+    @include css-triangle(bottom-left, $yellow, 50px, 50px);
+    bottom: 15%;
+    left: 15%;
+    position: absolute;
+}
+.left {
+    @include css-triangle(left, $yellow, 70px, 35px);
+    left: 0;
+    margin-top: -35px;
+    position: absolute;
+    top: 50%;
+}
